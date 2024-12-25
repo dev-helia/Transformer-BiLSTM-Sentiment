@@ -1,5 +1,6 @@
-# BiLSTM Models for Sentiment Analysis
 
+
+# BiLSTM Models for Sentiment Analysis
 
 This repository contains the implementation of **BiLSTM models** for document-level sentiment analysis, comparing the performance of traditional and improved BiLSTM techniques with BERT. The work is based on your research focusing on **Amazon book review data**, showcasing enhanced techniques like fine-tuning, attention, pooling, and layer normalization to achieve state-of-the-art results.
 
@@ -24,6 +25,18 @@ The dataset used is **Amazon book reviews** from Kaggle, relabeled to classify s
 
 Each category contains **1000 samples**, with an **80/20 train-validation split**.
 
+## Results
+The experiments highlight the performance of the models in terms of **recall** and **F1 score**:
+
+| Model                                      | Recall  | F1 Score |
+|-------------------------------------------|---------|----------|
+| BERT transformer                          | 0.6850  | 0.6895   |
+| Hybrid model: BiGRU + BiLSTM              | 0.4783  | 0.4760   |
+| 2-layer BiLSTM                            | 0.4900  | 0.4870   |
+| BiLSTM with fine-tuning and batch norm    | 0.6633  | 0.6602   |
+| BiLSTM with fine-tuning, attention, pool  | 0.6683  | 0.6750   |
+| BiLSTM with fine-tuning, layer norm, pool | 0.7017  | 0.7063   |
+| BiLSTM with fine-tuning, all techniques   | **0.7100** | **0.7112** |
 
 ## Model Architecture
 The improved **2-layer BiLSTM model** integrates:
@@ -32,7 +45,7 @@ The improved **2-layer BiLSTM model** integrates:
 - **Pooling layers**: Reducing output dimensions and improving computational efficiency.
 - **Layer normalization**: Ensuring stability and mitigating gradient issues.
 
-![Model Diagram](path/to/your/model_diagram.png)
+![Model Diagram](model_diagram.png)
 
 ## Installation and Usage
 
@@ -60,16 +73,7 @@ pip install -r requirements.txt
    python evaluate.py --model_path saved_model.pth
    ```
 
-### File Structure
-```
-BiLSTM-models-for-sentiment-analysis/
-├── data/                 # Dataset files
-├── models/               # Model architecture files
-├── scripts/              # Training and evaluation scripts
-├── results/              # Output results and metrics
-├── README.md             # Project description
-└── requirements.txt      # Dependencies
-```
+
 
 ## Citation
 If you use this code or research, please cite:
@@ -85,4 +89,3 @@ If you use this code or research, please cite:
 ## Contact
 For any questions or feedback, feel free to contact:
 - **Tao He**: [Email](mailto:hetaoo.c@gmail.com)
-
