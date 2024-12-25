@@ -75,17 +75,6 @@ pip install -r requirements.txt
 
 
 
-## Citation
-If you use this code or research, please cite:
-```
-@article{your_paper,
-  title={The Comparison of Transformer and Improved BiLSTM Model for Document-level Sentiment Analysis},
-  author={Tao He},
-  journal={Your Journal},
-  year={2024}
-}
-```
-
 ## Contact
 For any questions or feedback, feel free to contact:
 - **Tao He**: [Email](mailto:hetaoo.c@gmail.com)
